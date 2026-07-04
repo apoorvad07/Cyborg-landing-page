@@ -1,5 +1,3 @@
-// ============ DATA ============
-
 const events = [
     {
         tag: "ROBOTICS",
@@ -59,13 +57,13 @@ const galleryItems = [
 const sponsors = ["NEXORA", "QUANTUM.AI", "VERTEX LABS", "HELIX DYNAMICS", "ORBITAL TECH", "SYNAPSE", "ZENITH CORE", "ASTRA SYSTEMS"];
 
 const team = [
-    { name: "Aarav Mehta", role: "Overall Coordinator" },
-    { name: "Diya Sharma", role: "Technical Head" },
-    { name: "Kabir Rao", role: "Design Lead" },
-    { name: "Ishaan Verma", role: "Sponsorship Head" }
+    { name: "Apoorva Dwivedi", role: "Overall Coordinator" },
+    { name: "Ayush Awasthi", role: "Technical Head" },
+    { name: "Shantanu Dwivedi", role: "Design Lead" },
+    { name: "Naina Gangwar", role: "Sponsorship Head" }
 ];
 
-// ============ RENDER: EVENTS ============
+
 function renderEvents(){
     const grid = document.getElementById("eventsGrid");
     if(!grid) return;
@@ -82,7 +80,7 @@ function renderEvents(){
     `).join("");
 }
 
-// ============ RENDER: GALLERY ============
+
 function renderGallery(){
     const grid = document.getElementById("galleryGrid");
     if(!grid) return;
@@ -93,7 +91,6 @@ function renderGallery(){
     `).join("");
 }
 
-// ============ RENDER: SPONSORS ============
 function renderSponsors(){
     const grid = document.getElementById("sponsorsGrid");
     if(!grid) return;
@@ -102,7 +99,6 @@ function renderSponsors(){
     `).join("");
 }
 
-// ============ RENDER: TEAM ============
 function renderTeam(){
     const grid = document.getElementById("teamGrid");
     if(!grid) return;
@@ -118,9 +114,9 @@ function renderTeam(){
     }).join("");
 }
 
-// ============ COUNTDOWN ============
+
 function startCountdown(){
-    // Set your actual fest date here (YYYY-MM-DDTHH:mm:ss)
+    
     const targetDate = new Date("2026-12-26T09:00:00").getTime();
 
     const daysEl = document.getElementById("days");
@@ -158,7 +154,7 @@ function startCountdown(){
     const timer = setInterval(update, 1000);
 }
 
-// ============ STAT COUNTER (animates when scrolled into view) ============
+
 function animateStats(){
     const statEls = document.querySelectorAll(".stat-number");
     if(!statEls.length) return;
@@ -189,7 +185,7 @@ function animateStats(){
     statEls.forEach(el => observer.observe(el));
 }
 
-// ============ HAMBURGER MENU ============
+
 function setupHamburger(){
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
@@ -210,7 +206,7 @@ function setupHamburger(){
     });
 }
 
-// ============ BACK TO TOP ============
+
 function setupBackToTop(){
     const btn = document.getElementById("backToTop");
     if(!btn) return;
@@ -228,7 +224,6 @@ function setupBackToTop(){
     });
 }
 
-// ============ INIT ============
 document.addEventListener("DOMContentLoaded", () => {
     renderEvents();
     renderGallery();
